@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface MenuInterface {
     name: string;
@@ -7,37 +9,31 @@ interface MenuInterface {
 
 const MENUS: MenuInterface[] = [
     {
-        name: "Looking for Investing",
-        url: "investing"
-    },
-    {
-        name: "Sign up for Beta",
-        url: "beta"
-    },
-    {
         name: "Connect with Us",
-        url: "connect"
-    },
-    {
-        name: "The team",
-        url: "team"
+        url: "/connect"
     }
 ]
 
 export const NavigationHeader: React.FC = () => {
 
-    const menuStyle = `hover:cursor-pointer hover:font-bold`;
+    const pathname = usePathname();
 
+    const menuStyle = `hover:cursor-pointer hover:font-bold`;
     return (
-        <div className="px-20 py-5 border-b flex justify-between items-center">
-            <div className="w-1/4"> <img src="logo.svg" /></div>
-            <div className='hidden lg:block w-full'>
-                <div className="flex gap-x-5 text-2xl w-full justify-between">
-                    {MENUS.map((menu: MenuInterface) => {
-                        return <Link key={menu.name} className={menuStyle} href={menu.url}> {menu.name} </Link>
-                    })}
-                </div>
+        <div className="px-10 lg:px-20 py-5 border-b flex justify-between items-center">
+
+            <div className="w-1/4"> <Link href={'/'}> <img src="logo.svg" /> </Link></div>
+
+            <div className="flex gap-x-5 text-2xl justify-between">
+                {MENUS.map((menu: MenuInterface) => {
+                    return <Link
+                        key={menu.name}
+                        className={`${menuStyle} ${pathname == menu.url ? ` font-bold` : ''}`}
+                        href={menu.url}
+                    > {menu.name} </Link>
+                })}
             </div>
+
         </div>
     )
 }

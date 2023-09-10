@@ -23,8 +23,8 @@ export const HeroSection: React.FC = () => {
     return (
         <div className="lg:h-[500px] bg-orange-500 w-full rounded-3xl lg:flex">
             <div className="lg:w-1/2 text-white p-10 flex flex-col justify-between">
-                <h1 className="font-bold text-5xl xl:text-6xl 
-                            leading-[55px] xl:leading-[70px]">
+                <h1 className="font-bold text-3xl md:text-5xl xl:text-6xl 
+                            leading-[40px] md:leading-[55px] xl:leading-[70px]">
                     Process DER Applications in Few Minutes. </h1>
                 <p className="py-5 xl:leading-[30px] xl:text-xl"> Automate processing distributed energy resource
                     (DER&apos;s) applications such as solar and energy storage

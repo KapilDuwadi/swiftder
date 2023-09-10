@@ -24,7 +24,7 @@ export const NavigationHeader: React.FC = () => {
 
             <div className="w-1/4"> <Link href={'/'}> <img src="logo.svg" /> </Link></div>
 
-            <div className="flex gap-x-5 text-2xl justify-between">
+            <div className="flex gap-x-5 text-xl md:text-2xl justify-between">
                 {MENUS.map((menu: MenuInterface) => {
                     return <Link
                         key={menu.name}

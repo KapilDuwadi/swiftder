@@ -15,7 +15,7 @@ const SubHeadlineSection: React.FC<SubHeadlineSectionProps> = ({
 
     return (
         <div className={containerStyle}>
-            <h1 className='text-4xl xl:text-5xl leading-[50px] xl:leading-[65px] pb-2 font-medium'> {titleFirst}
+            <h1 className='text-3xl md:text-4xl xl:text-5xl leading-[40px] md:leading-[50px] xl:leading-[65px] pb-2 font-medium'> {titleFirst}
                 {forceFullWidth ? null : <br />} <span className='text-orange-500'> {titleSecond} </span></h1>
             <p className='py-3 text-xl pt-10 lg:pr-10 xl:text-2xl  xl:leading-[40px]'>
                 {description}

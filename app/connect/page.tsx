@@ -25,7 +25,7 @@ export default function Home() {
         <div className="w-full 
             h-[calc(100vh-100px)]  flex flex-col 
             items-center justify-center p-10 md:p-20">
-            <h1 className="text-center text-3xl">
+            <h1 className="text-center text-xl md:text-3xl">
                 Thank you for taking the time to connect with Us.
                 Please reach out to us at <span className="text-orange-500 font-bold">
                     contact.swiftder@gmail.com </span>
